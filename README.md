@@ -1,4 +1,4 @@
-# Network Scanner Tool kujooooooo
+# Network Scanner Tool
 
 A Python-based network reconnaissance tool that combines ping functionality and port scanning capabilities, similar to tools available in penetration testing distributions like Kali Linux. This tool helps identify active hosts and discover open ports that could potentially be entry points into a system.
 
@@ -11,6 +11,9 @@ A Python-based network reconnaissance tool that combines ping functionality and 
 - [Common Ports and Their Significance](#common-ports-and-their-significance)
 - [Security Implications](#security-implications)
 - [Legal Disclaimer](#legal-disclaimer)
+- [Example Outputs](#example-outputs)
+- [Visual Guide](#visual-guide)
+- [Troubleshooting Common Issues](#troubleshooting-common-issues)
 
 ## Features
 
@@ -181,7 +184,134 @@ Remember that port scanning is often the first step in both security assessments
 - Compliance checking
 - Security architecture planning
 
-However, this knowledge comes with responsibility. Always use security tools ethically and legally. 
+However, this knowledge comes with responsibility. Always use security tools ethically and legally.
 
+## Example Outputs
 
+### 1. Basic Port Scan Output
+```bash
+$ python network_scanner.py example.com -p 80-443
+
+Scanning Target: example.com (93.184.216.34)
+Time Started: 2024-03-20 10:30:15
+==================================================
+
+Pinging example.com...
+Host example.com is up!
+
+Starting port scan on 93.184.216.34
+==================================================
+Port 80 is open - Service: http
+Port 443 is open - Service: https
+```
+
+### 2. Comprehensive Service Discovery
+```bash
+$ python network_scanner.py localhost -p 1-100
+
+Scanning Target: localhost (127.0.0.1)
+Time Started: 2024-03-20 10:35:22
+==================================================
+
+Pinging localhost...
+Host localhost is up!
+
+Starting port scan on 127.0.0.1
+==================================================
+Port 21 is open - Service: ftp
+Port 22 is open - Service: ssh
+Port 80 is open - Service: http
+Port 3306 is open - Service: mysql
+```
+
+### 3. Failed Scan Example
+```bash
+$ python network_scanner.py nonexistent.domain
+
+Hostname could not be resolved
+```
+
+## Visual Guide
+
+### Tool Interface and Results
+
+![Port Scanning Process](screenshots/port_scan_process.png)
+*Figure 1: Example of a port scanning process in action*
+
+![Scan Results](screenshots/scan_results.png)
+*Figure 2: Sample output showing discovered open ports and services*
+
+### Understanding the Results
+
+![Port Analysis](screenshots/port_analysis.png)
+*Figure 3: Analysis of different port states and their meanings*
+
+To add your own screenshots:
+
+1. Save your screenshots in the `screenshots` directory with these names:
+   ```
+   screenshots/
+   ├── port_scan_process.png
+   ├── scan_results.png
+   └── port_analysis.png
+   ```
+
+2. Recommended screenshot contents:
+   - `port_scan_process.png`: Capture the tool while it's running a scan
+   - `scan_results.png`: Show a successful scan with multiple open ports
+   - `port_analysis.png`: Include a diagram or example of different port states
+
+3. Image requirements:
+   - Format: PNG or JPG
+   - Resolution: At least 1280x720
+   - Size: Keep under 500KB per image
+   - Content: Ensure no sensitive information is visible
+
+## Troubleshooting Common Issues
+
+### Common Error Messages
+
+1. "Hostname could not be resolved"
+   - Check internet connection
+   - Verify the hostname is correct
+   - Try using IP address instead
+
+2. "Permission denied"
+   - Run the script with administrator/root privileges
+   - Check firewall settings
+   - Verify you have permission to scan the target
+
+3. "Connection timed out"
+   - Target might be blocking ICMP/ping requests
+   - Try increasing the timeout value
+   - Check network connectivity
+
+### Performance Tips
+
+1. For faster scans:
+   - Limit port ranges to commonly used ports
+   - Use specific port lists instead of ranges
+   - Scan local network hosts first
+
+2. For more accurate results:
+   - Run multiple scans
+   - Verify results with different tools
+   - Document false positives
+
+Remember that port scanning is often the first step in both security assessments and cyber attacks. Use this tool responsibly and only on systems you own or have explicit permission to test. Understanding open ports and services is crucial for:
+
+- Network security assessments
+- System hardening
+- Vulnerability management
+- Compliance checking
+- Security architecture planning
+
+However, this knowledge comes with responsibility. Always use security tools ethically and legally.
+
+## Example Output
+
+Here's an example of scanning a website for common web ports:
+
+![Network Scanner Output](screenshots/scan_output.png)
+*Example output showing the results of scanning a website's ports*
 
