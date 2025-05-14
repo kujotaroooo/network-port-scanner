@@ -231,41 +231,7 @@ $ python network_scanner.py nonexistent.domain
 Hostname could not be resolved
 ```
 
-## Visual Guide
 
-### Tool Interface and Results
-
-![Port Scanning Process](screenshots/port_scan_process.png)
-*Figure 1: Example of a port scanning process in action*
-
-![Scan Results](screenshots/scan_results.png)
-*Figure 2: Sample output showing discovered open ports and services*
-
-### Understanding the Results
-
-![Port Analysis](screenshots/port_analysis.png)
-*Figure 3: Analysis of different port states and their meanings*
-
-To add your own screenshots:
-
-1. Save your screenshots in the `screenshots` directory with these names:
-   ```
-   screenshots/
-   ├── port_scan_process.png
-   ├── scan_results.png
-   └── port_analysis.png
-   ```
-
-2. Recommended screenshot contents:
-   - `port_scan_process.png`: Capture the tool while it's running a scan
-   - `scan_results.png`: Show a successful scan with multiple open ports
-   - `port_analysis.png`: Include a diagram or example of different port states
-
-3. Image requirements:
-   - Format: PNG or JPG
-   - Resolution: At least 1280x720
-   - Size: Keep under 500KB per image
-   - Content: Ensure no sensitive information is visible
 
 ## Troubleshooting Common Issues
 
