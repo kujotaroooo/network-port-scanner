@@ -2,6 +2,13 @@
 
 A Python-based network reconnaissance tool that combines ping functionality and port scanning capabilities, similar to tools available in penetration testing distributions like Kali Linux. This tool helps identify active hosts and discover open ports that could potentially be entry points into a system.
 
+## Example Output
+
+Here's an example of scanning a website for common web ports:
+
+![Network Scanner Output](screenshots/scan_output.png)
+*Example output showing the results of scanning a website's ports*
+
 ## Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
@@ -274,10 +281,5 @@ Remember that port scanning is often the first step in both security assessments
 
 However, this knowledge comes with responsibility. Always use security tools ethically and legally.
 
-## Example Output
 
-Here's an example of scanning a website for common web ports:
-
-![Network Scanner Output](screenshots/scan_output.png)
-*Example output showing the results of scanning a website's ports*
 
