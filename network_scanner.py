@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#please use this for ethical purpose only :)
 
 import socket
 import subprocess
@@ -57,11 +57,10 @@ def scan_ports(target, start_port=1, end_port=1024):
         threads.append(thread)
         thread.start()
     
-    # Wait for all threads to complete
+
     for thread in threads:
         thread.join()
-    
-    # Print results in order
+
     while not queue.empty():
         print(queue.get())
 
@@ -74,21 +73,20 @@ def main():
     target = args.target
     
     try:
-        # First, try to resolve the hostname
+    
         target_ip = socket.gethostbyname(target)
         print(f"\nScanning Target: {target} ({target_ip})")
         print(f"Time Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print("=" * 50)
 
-        # Perform ping
+    
         print(f"\nPinging {target}...")
         if ping_host(target):
             print(f"Host {target} is up!")
             
-            # Parse port range
             start_port, end_port = map(int, args.ports.split('-'))
             
-            # Perform port scan
+         
             scan_ports(target_ip, start_port, end_port)
         else:
             print(f"Host {target} is down or not responding to ping")
