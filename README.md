@@ -1,6 +1,6 @@
 # Network Scanner Tool
 
-A Python-based network reconnaissance tool that combines ping functionality and port scanning capabilities, similar to tools available in penetration testing distributions like Kali Linux. This tool helps identify active hosts and discover open ports that could potentially be entry points into a system.
+
 
 ## Example Output
 
@@ -9,29 +9,6 @@ Here's an example of scanning a website for common web ports:
 ![Network Scanner Output](screenshots/scan_output.png)
 *Example output showing the results of scanning a website's ports*
 
-## Table of Contents
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage Guide](#usage-guide)
-- [Understanding Port Scanning](#understanding-port-scanning)
-- [Common Ports and Their Significance](#common-ports-and-their-significance)
-- [Security Implications](#security-implications)
-- [Legal Disclaimer](#legal-disclaimer)
-- [Example Outputs](#example-outputs)
-- [Visual Guide](#visual-guide)
-- [Troubleshooting Common Issues](#troubleshooting-common-issues)
-
-## Features
-
-- **Host Discovery**: Ping functionality to identify active hosts
-- **Port Scanning**: Multi-threaded TCP port scanning
-- **Service Identification**: Automatic service detection for open ports
-- **Custom Port Ranges**: Flexible port range specification
-- **Cross-Platform**: Works on Windows, Linux, and macOS
-- **No Dependencies**: Uses Python standard library only
-
-## Prerequisites
 
 - Python 3.x installed on your system
 - Basic understanding of networking concepts
@@ -98,22 +75,7 @@ Here's an example of scanning a website for common web ports:
    python network_scanner.py target_host -p 21,22,23,25,80,443,3306,5432
    ```
 
-## Understanding Port Scanning
 
-### Port Types and Their Significance
-
-1. **Well-Known Ports (1-1023)**
-   - Most privileged services
-   - Require root/admin access to bind
-   - Commonly targeted in security assessments
-
-2. **Registered Ports (1024-49151)**
-   - Used by applications
-   - May indicate running services
-
-3. **Dynamic Ports (49152-65535)**
-   - Temporary ports
-   - Used for client connections
 
 ## Common Ports and Their Significance
 
@@ -129,69 +91,6 @@ Here's an example of scanning a website for common web ports:
 | 3389 | RDP     | Remote desktop, Windows access |
 | 8080 | HTTP Alt| Alternative web server, proxies |
 
-## Security Implications
-
-### Port Scanning as a Security Tool
-
-1. **Reconnaissance**
-   - Identifies potential entry points
-   - Maps network services
-   - Discovers unauthorized services
-
-2. **Common Entry Points**
-   - Open ports can be potential "backdoors"
-   - Unpatched services may be vulnerable
-   - Default configurations might be exploitable
-
-3. **Best Practices for Protection**
-   - Close unnecessary ports
-   - Use firewalls
-   - Keep services updated
-   - Monitor for scanning activity
-
-### Defensive Measures
-
-1. **For System Administrators**
-   - Regular port audits
-   - Implement port knocking
-   - Use intrusion detection systems (IDS)
-   - Configure proper firewall rules
-
-2. **For Developers**
-   - Implement rate limiting
-   - Use secure defaults
-   - Monitor access logs
-   - Implement proper authentication
-
-## Legal Disclaimer
-
-This tool is provided for educational and authorized testing purposes only. Unauthorized port scanning may be illegal in many jurisdictions and can be considered a precursor to cyber attacks. Always:
-
-1. Obtain explicit permission before scanning any systems
-2. Follow your organization's security policies
-3. Comply with all applicable laws and regulations
-4. Document your testing activities
-5. Report security issues responsibly
-
-## License
-
-This tool is provided under the MIT License. Use at your own risk.
-
-## Contributing
-
-Feel free to submit pull requests, report bugs, or suggest features.
-
-## Author's Note
-
-Remember that port scanning is often the first step in both security assessments and cyber attacks. Use this tool responsibly and only on systems you own or have explicit permission to test. Understanding open ports and services is crucial for:
-
-- Network security assessments
-- System hardening
-- Vulnerability management
-- Compliance checking
-- Security architecture planning
-
-However, this knowledge comes with responsibility. Always use security tools ethically and legally.
 
 ## Example Outputs
 
