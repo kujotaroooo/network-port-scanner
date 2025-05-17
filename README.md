@@ -139,46 +139,7 @@ Hostname could not be resolved
 
 
 
-## Troubleshooting Common Issues
 
-### Common Error Messages
-
-1. "Hostname could not be resolved"
-   - Check internet connection
-   - Verify the hostname is correct
-   - Try using IP address instead
-
-2. "Permission denied"
-   - Run the script with administrator/root privileges
-   - Check firewall settings
-   - Verify you have permission to scan the target
-
-3. "Connection timed out"
-   - Target might be blocking ICMP/ping requests
-   - Try increasing the timeout value
-   - Check network connectivity
-
-### Performance Tips
-
-1. For faster scans:
-   - Limit port ranges to commonly used ports
-   - Use specific port lists instead of ranges
-   - Scan local network hosts first
-
-2. For more accurate results:
-   - Run multiple scans
-   - Verify results with different tools
-   - Document false positives
-
-Remember that port scanning is often the first step in both security assessments and cyber attacks. Use this tool responsibly and only on systems you own or have explicit permission to test. Understanding open ports and services is crucial for:
-
-- Network security assessments
-- System hardening
-- Vulnerability management
-- Compliance checking
-- Security architecture planning
-
-However, this knowledge comes with responsibility. Always use security tools ethically and legally.
 
 
 
